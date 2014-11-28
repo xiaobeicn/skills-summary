@@ -18,20 +18,17 @@
 
 ### 列表状态
 
-- [ ] apache
 - [ ] css
 - [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
 - [ ] html
 - [ ] http
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
-- [ ] linux
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
 - [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
-- [ ] nginx
 - [ ] nosql
 - [ ] open-source
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
-- [ ] shell
+- [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
 
 
 #### 开源协议
