@@ -18,8 +18,8 @@
 
 ### 可用目录
 
-* [x][PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
-* [][js]()
+- [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
+- [ ] js
 
 
 #### 开源协议
