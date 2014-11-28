@@ -36,4 +36,4 @@
 
 #### 开源协议
 基于 [MIT License](https://github.com/xiaobeicn/programming-skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
-部分源码来源网络收集，如果不希望我们展示或者侵权的地方联系我<xiaobeicn@163.com>，我会及时处理。
+部分源码来源网络收集，如果不希望我们展示或者侵权的地方联系我 <xiaobeicn@163.com> ，我会及时处理。
