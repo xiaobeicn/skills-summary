@@ -45,5 +45,6 @@
 * 统一字符集为UTF8
 * 统一命名规范
 
-作者：石展@赶集 http://weibo.com/wushizhan
-====
+>  作者：石展@赶集 http://weibo.com/wushizhan
+
+----
