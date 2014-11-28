@@ -11,7 +11,7 @@
 
 #### 贡献要求
 
-* 在对应文件夹内创建单独文件或在文件夹内`README.md`中直接扩充
+* 在对应文件夹内创建单独文件(推荐)或在文件夹内`README.md`中直接扩充
 * 文件内容不宜过大，最好控制在百行以内
 * 如果是多个片段一个归属类，最好只创建一个文件
 * 代码质量要高，可以是自己代码的提炼，也可以是开源优秀代码段
@@ -24,7 +24,7 @@
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
 - [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
-- [ ] nosql
+- [x] [nosql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/nosql)
 - [ ] open-source
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
