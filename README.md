@@ -21,7 +21,6 @@
 - [ ] css
 - [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
 - [ ] html
-- [ ] http
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
 - [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
