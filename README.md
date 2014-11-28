@@ -27,7 +27,7 @@
 - [x] [nosql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/nosql)
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
-- [ ] open-source
+- [x] [open-source](https://github.com/xiaobeicn/programming-skills-summary/tree/master/open-source)
 
 
 #### 开源协议
