@@ -23,7 +23,7 @@
 - [ ] git
 - [ ] html
 - [ ] http
-- [ ] js
+- [x] js
 - [ ] linux
 - [ ] markdown
 - [ ] mysql
