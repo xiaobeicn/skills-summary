@@ -1,7 +1,7 @@
 
 ### 设置全局代理
 
-```git
+```shell
 git config --global https.proxy https://user:password@address:port 
 ```
 
