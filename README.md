@@ -18,8 +18,20 @@
 
 ### 可用目录
 
-- [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
+- [ ] apache
+- [ ] css
+- [ ] git
+- [ ] html
+- [ ] http
 - [ ] js
+- [ ] linux
+- [ ] markdown
+- [ ] mysql
+- [ ] nginx
+- [ ] nosql
+- [ ] open-source
+- [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
+- [ ] shell
 
 
 #### 开源协议
