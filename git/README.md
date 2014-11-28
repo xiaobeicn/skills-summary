@@ -1,5 +1,23 @@
+### 让你们clone laravel更快（by [overtrue](https://github.com/overtrue) ）
+我们通常在克隆github上的项目时做法如下：
 
-### 设置全局代理
+```git
+git clone git@github.com:laravel/laravel.git
+```
+
+你会发现各种慢（如果该项目历史比较悠久，也就是说有很多commits），那么其实你clone的时候是把历史也拉下来。
+
+可是我们需要这些东西吗？不需要，那么就加一个选项吧：
+
+```git
+git clone git@github.com:laravel/laravel.git --depth=1
+```
+
+--depth=1 是指只拉取最后一次的提交结果。
+
+----
+
+### 设置全局代理（来自网络）
 
 ```git
 git config --global https.proxy https://user:password@address:port 
