@@ -28,6 +28,7 @@
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
 - [x] [open-source](https://github.com/xiaobeicn/programming-skills-summary/tree/master/open-source)
+- [ ] other
 
 
 #### 开源协议
