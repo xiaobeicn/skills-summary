@@ -18,16 +18,16 @@
 
 ### 列表状态
 
-- [ ] api
+- [x] [api](https://github.com/xiaobeicn/programming-skills-summary/tree/master/api)
 - [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
 - [x] [html-css](https://github.com/xiaobeicn/programming-skills-summary/tree/master/html-css)
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
 - [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
 - [x] [nosql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/nosql)
-- [ ] open-source
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
+- [ ] open-source
 
 
 #### 开源协议
