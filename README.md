@@ -23,7 +23,7 @@
 - [ ] git
 - [ ] html
 - [ ] http
-- [x] js
+- [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [ ] linux
 - [ ] markdown
 - [ ] mysql
