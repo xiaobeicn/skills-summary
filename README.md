@@ -20,7 +20,7 @@
 
 - [ ] apache
 - [ ] css
-- [ ] git
+- [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
 - [ ] html
 - [ ] http
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
