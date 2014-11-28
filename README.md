@@ -19,9 +19,8 @@
 ### 列表状态
 
 - [ ] api
-- [x] [css](https://github.com/xiaobeicn/programming-skills-summary/tree/master/css)
 - [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
-- [ ] html
+- [x] [html-css](https://github.com/xiaobeicn/programming-skills-summary/tree/master/html-css)
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
 - [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
