@@ -74,7 +74,50 @@
 ?>
 ```
 
+### 让项目支持laravel一样的自动环境检测
 
+代码在**开发**机器上自动调用开发配置，当为产品环境自动调用产品环境配置，让你的应用自动化识别运行环境的方法：
+
+1. 添加环境列表：
+
+  app/env.php:
+  ```php
+  <?php
+  
+  return [
+      // 环境名 => [hostname1, hostname2, ...] ， 环境名请通过shell命令: hostname 得到
+      'local'      => ['overtrue', 'domain.local'], 
+      'production' => ['*'], // 除了local的机器外，其它为产品环境
+  ];
+  ```
+2. 环境识别函数：
+
+  ```
+  /**
+   * 获取应用运行环境
+   *
+   * @return string
+   */
+  function env($test = null)
+  {
+      $envs = include __DIR__ . '/env.php';
+      foreach ($envs as $env => $hostnames) {
+          if (in_array(gethostname(), $hostnames) || in_array('*', $hostnames)) {
+              return $test ? $env == $test : $env;
+          }
+      }
+  
+      return $test ? 'production' === $test : 'production';
+  }
+  ```
+3. 根据环境值读取对应的配置：
+
+  ```
+  $env = env(); // local
+  // do you things.
+
+  ```
+得到了环境名，就拿他去读取相应的配置文件吧，更多可以参考：https://github.com/overtrue/rester
 
 
 
