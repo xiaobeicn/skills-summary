@@ -26,7 +26,7 @@
 - [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
 - [ ] linux
 - [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
-- [ ] mysql
+- [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
 - [ ] nginx
 - [ ] nosql
 - [ ] open-source
