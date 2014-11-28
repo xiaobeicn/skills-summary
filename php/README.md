@@ -85,9 +85,9 @@
   <?php
   
   return [
-      // 环境名 => [hostname1, hostname2, ...]
-      'local'      => ['overtrue'], 
-      'production' => ['*'],
+      // 环境名 => [hostname1, hostname2, ...] ， 环境名请通过shell命令: hostname 得到
+      'local'      => ['overtrue', 'domain.local'], 
+      'production' => ['*'], // 除了local的机器外，其它为产品环境
   ];
   ```
 2. 环境识别函数：
