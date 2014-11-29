@@ -51,4 +51,22 @@
 
 ----
 
+### 单行省略号纯css解决方案
 
+```css
+selector{
+	-o-text-overflow: ellipsis;/*兼容opera*/
+	text-overflow: ellipsis;/*这就是省略号喽*/		  
+	overflow: hidden;/*设置超过的隐藏*/
+	white-space: nowrap;/*设置不折行*/
+	width:200px;/*设置宽度*/
+}
+```
+
+----
+
+### 解决中文版Chrome下不能显示小于12px的字体
+
+```css
+html{-webkit-text-size-adjust: none;}
+```
