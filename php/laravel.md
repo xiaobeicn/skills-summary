@@ -1,6 +1,6 @@
 # Laravel
 
-1、监听查询SQL写入到日志：
+1、监听查询SQL写入到日志(by [overtrue](https://github.com/overtrue))：
 
 ```php
 if (App::environment() != 'production') {
