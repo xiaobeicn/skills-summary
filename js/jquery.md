@@ -290,4 +290,5 @@ $('#stuff').on('click', function() {
 鉴于vanilla 和 jQuery之间的性能差异，我强烈建议吸收两人的精华，使用（可能的话）和jQuery等价的原生代码。
 
 > via: http://www.codeceo.com/article/jquery-coding-high-qulity.html
+
 ----
