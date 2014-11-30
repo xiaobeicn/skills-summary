@@ -36,6 +36,7 @@
 | --------   | :-----:  | :----:  |
 | xiaobeicn | all | https://github.com/xiaobeicn |
 | overtrue  | php | https://github.com/overtrue |
+| Lin-H     | js  | https://github.com/Lin-H  |
 | ...  | ... | ... |
 
 
