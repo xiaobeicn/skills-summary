@@ -292,3 +292,29 @@ $('#stuff').on('click', function() {
 > via: http://www.codeceo.com/article/jquery-coding-high-qulity.html
 
 ----
+
+### 简易jQuery输入框模糊查询匹配select
+
+```javascript
+$("#search").keyup(function(){
+    //过滤空
+    var keyword = $(this).val().toLowerCase().replace(/(^\s*)|(\s*$)/g, "");
+    if (keyword) {
+        //使用正则
+        var reg = new RegExp(keyword,'i');
+        //遍历option
+        $('option').each(function(key,val){
+            //定义要搜索的字符串
+            var ref = $(this).attr('ref');
+            //如果搜到，设置select值
+            if(ref && reg.test( ref ) ){
+                $("select").val($(val).val());
+                return false; 
+            }
+        });//end each
+    }//end if keyword
+});
+```    
+
+----
+
