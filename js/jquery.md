@@ -318,3 +318,35 @@ $("#search").keyup(function(){
 
 ----
 
+### 解决iframe自适应高度
+下面的两种方法自选其一就行了。一个是放在和iframe同页面的，一个是放在test.html页面的。
+注意别放错了地方。
+iframe的代码中，注意要写ID，没有ID查找不到
+
+```html
+<iframe src="test.html" id="main" width="700" height="300" frameborder="0" scrolling="auto"></iframe>
+```
+
+方法一：
+//注意：下面的代码是放在test.html调用
+
+```javascript
+$(window.parent.document).find("#main").load(function(){
+var main = $(window.parent.document).find("#main");
+var thisheight = $(document).height()+30;
+main.height(thisheight);
+});
+```
+
+方法二：
+//注意：下面的代码是放在和iframe同一个页面调用
+
+```javascript
+$("#main").load(function(){
+var mainheight = $(this).contents().find("body").height()+30;
+$(this).height(mainheight);
+}); 
+```
+
+----
+
