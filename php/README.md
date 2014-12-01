@@ -203,6 +203,20 @@ echo "</pre>";
 
 ---
 
+### 解决中文用base64_decode解密的时候,出现乱码
+* 利用PHP函数设置页面的头文件编码
+
+```php
+header("Content-Type:text/html;charset=utf-8");
+```
+
+* 有一些中文字符,用GET形式传过来的时候,+号会被替换成空格.
+
+```php
+$key = base64_decode(str_replace(" ","+",$_GET['key']));
+```
+
+----
 
 
 
