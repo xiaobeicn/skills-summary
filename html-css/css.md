@@ -70,3 +70,123 @@ selector{
 ```css
 html{-webkit-text-size-adjust: none;}
 ```
+
+----
+
+### 垂直对齐
+
+```css
+.verticalcenter{
+position: relative;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+```
+### 根据文件格式引用不同样式
+
+```css 
+a[href^="http://"]{
+padding-right: 20px;
+background: url(external.gif) no-repeat center right;
+}
+/* emails */
+a[href^="mailto:"]{
+padding-right: 20px;
+background: url(email.png) no-repeat center right;
+}
+ 
+/* pdfs */
+a[href$=".pdf"]{
+padding-right: 20px;
+background: url(pdf.png) no-repeat center right;
+}
+````
+http://jsfiddle.net/agusesetiyono/3sL1r0mw/light/
+
+### 跨浏览器图像灰度
+
+```css
+<svg xmlns="http://www.w3.org/2000/svg">
+<filter id="grayscale">
+<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"></feColorMatrix>
+</filter>
+</svg>
+```
+
+### CSS 列表自动宽度
+
+```css
+white-space: nowrap;
+```
+
+### 显示阴影
+
+```css
+.box-shadow {
+background-color: #FF8020;
+width: 160px;
+height: 90px;
+margin-top: -45px;
+margin-left: -80px;
+position: absolute;
+top: 50%;
+left: 50%;
+}
+.box-shadow:after {
+content: "";
+width: 150px;
+height: 1px;
+margin-top: 88px;
+margin-left: -75px;
+display: block;
+position: absolute;
+left: 50%;
+z-index: -1;
+-webkit-box-shadow: 0px 0px 8px 2px #000000;
+-moz-box-shadow: 0px 0px 8px 2px #000000;
+box-shadow: 0px 0px 8px 2px #000000;
+}
+```
+
+### 长文本封装
+
+```css
+pre {
+white-space: pre-line;
+word-wrap: break-word;
+}
+```
+
+### 模糊文本
+
+```css
+.blurry-text {
+color: transparent;
+text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+```
+
+### 使用CSS制作动画省略号
+
+```css
+.loading:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	animation: ellipsis 2s infinite;
+	content: "\2026"; /* ascii code for the ellipsis character */
+}
+@keyframes ellipsis {
+	from {
+		width: 2px;
+	}
+	to {
+		width: 15px;
+	}
+}
+```
+
+----
+
