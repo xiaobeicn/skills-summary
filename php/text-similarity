@@ -1,0 +1,109 @@
+### PHP版余弦定理处理文本相似度+分词
+
+```php
+<?
+//开头
+header("Content-Type:text/html;charset=utf-8");
+error_reporting(E_ERROR | E_PARSE);
+date_default_timezone_set('Asia/Shanghai');
+
+/*
+*	文本相似度（余弦定理）
+*	V1.0
+*	$text1	第一段文本
+*	$text2	第二段文本
+*	$tag	分词标志，默认是空格
+*	$isTime 是否显示时间
+*/
+
+function textSimilarity( $text1 , $text2 , $isTime = true){
+	//时间
+	$mtime = explode(' ', microtime());
+	$starttime = $mtime[1] + $mtime[0];
+	
+    $words = array();
+	//排除的字
+    $excludeArr = array('的','了','和','呢','啊','哦','恩','嗯','吧');
+
+	//分词
+	$segList1 = segText($text1);
+	$segList2 = segText($text2);
+	
+	//分析
+	//t1
+	foreach($segList1 as $v){
+		if( !in_array($v , $excludeArr) ){
+			if( !array_key_exists($v , $words) ){
+				$words[$v] = array(1 , 0);
+			}else{
+				$words[$v][0] += 1;
+			}
+		}
+	}
+	
+	//t2
+	foreach($segList2 as $v){
+		if( !in_array($v , $excludeArr) ){
+			if( !array_key_exists($v , $words) ){
+				$words[$v] = array(0 , 1);
+			}else{
+				$words[$v][1] += 1;
+			}
+		}
+	}
+	
+	$sum = 0;
+	$sumT1 = 0;
+	$sumT2 = 0;
+	foreach($words as $kk=>$vv){
+		$sum += $words[$kk][0]*$words[$kk][1];
+		//幂运算
+		$sumT1 += pow($words[$kk][0],2);
+		$sumT2 += pow($words[$kk][1],2);
+	}
+	
+	//相似度计算
+	$rate = $sum/(sqrt($sumT1*$sumT2));
+	$rate = $rate?$rate:'失败了~';
+	
+	//时间
+	$mtime = explode(' ', microtime());
+	$endtime = $mtime[1] + $mtime[0];
+	
+	//测试用，时间消耗
+	if(isTime){
+		echo '<p style="border:1px solid #CCCCCC; padding:5px;">用时：'.($endtime - $starttime).'</p>';
+	}
+	
+    return $rate;
+}
+
+/*
+*	分词	【http://www.xunsearch.com/scws/docs.php#pscws23】
+*	$text	传入的字符串
+*/
+function segText($text){
+	//实例化
+	$so = scws_new();
+	//字符集
+	$so->set_charset('utf8');
+	//处理
+	$so->send_text($text);
+	//便利出需要的数组
+	while($res = $so->get_result()){
+		foreach($res as $v){
+			$outText[] = $v['word'];
+		}
+	}
+	//关闭
+	$so->close();
+	
+	return $outText;
+}
+
+//测试
+$str1 = "陈凯歌并不是《无极》的唯一著作权人，一部电影的整体版权归电影制片厂所有。this is a text";
+$str2 ="我是一个中国人,我会C++语言，我也有很多T恤衣服。this is a text";
+
+echo textSimilarity($str1,$str2);
+```
