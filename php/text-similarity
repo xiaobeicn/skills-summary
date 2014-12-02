@@ -55,7 +55,9 @@ function textSimilarity($text1, $text2, $isTime = true)
     }
     return $rate;
 }
+```
 
+```php
 //分词	【http://www.xunsearch.com/scws/docs.php#pscws23】
 function segText($text)
 {
@@ -75,7 +77,9 @@ function segText($text)
     $so->close();
     return $outText;
 }
+```
 
+```php
 //测试
 $str1 = '陈凯歌并不是《无极》的唯一著作权人，一部电影的整体版权归电影制片厂所有。this is a text';
 $str2 = '我是一个中国人,我会C++语言，我也有很多T恤衣服。this is a text';
