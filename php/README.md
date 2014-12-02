@@ -218,6 +218,24 @@ $key = base64_decode(str_replace(" ","+",$_GET['key']));
 
 ----
 
+### 缓冲区刷新
+
+```php
+function flush_buffers()
+{
+	ob_end_flush();
+	ob_flush();
+	flush();
+	ob_start('ob_callback');
+}
+
+function ob_callback($buffer)
+{
+	return $buffer . str_repeat(' ', max(0, 4097 - strlen($buffer)));
+}
+```
+
+----
 
 
 
