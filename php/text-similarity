@@ -1,14 +1,7 @@
 ### PHP版余弦定理处理文本相似度+分词
 
 ```php
-/**
-*	文本相似度（余弦定理）
-*	V1.0
-*	$text1	第一段文本
-*	$text2	第二段文本
-*	$tag	分词标志，默认是空格
-*	$isTime 是否显示时间
-*/
+//文本相似度（余弦定理）
 function textSimilarity($text1, $text2, $isTime = true)
 {
     //时间
@@ -63,10 +56,7 @@ function textSimilarity($text1, $text2, $isTime = true)
     return $rate;
 }
 
-/**
-*	分词	【http://www.xunsearch.com/scws/docs.php#pscws23】
-*	$text	传入的字符串
-*/
+//分词	【http://www.xunsearch.com/scws/docs.php#pscws23】
 function segText($text)
 {
     //实例化
