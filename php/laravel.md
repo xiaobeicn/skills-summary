@@ -5,7 +5,7 @@
 ```php
 if (App::environment() != 'production') {
     //记录SQL
-    Event::listen('illuminate.query', function($sql, $param)
+    Event::listen('illuminate.query', function($sql, $params)
     {
         array_unshift($params, str_replace('?', '%s', $sql));
         Log::info(call_user_func_array('sprintf', $params));
