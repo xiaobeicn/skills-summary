@@ -1,7 +1,6 @@
 ### PHP版余弦定理处理文本相似度+分词
 
 ```php
-<?
 //开头
 header("Content-Type:text/html;charset=utf-8");
 error_reporting(E_ERROR | E_PARSE);
@@ -106,4 +105,5 @@ $str1 = "陈凯歌并不是《无极》的唯一著作权人，一部电影的�
 $str2 ="我是一个中国人,我会C++语言，我也有很多T恤衣服。this is a text";
 
 echo textSimilarity($str1,$str2);
+
 ```
