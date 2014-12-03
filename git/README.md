@@ -5,9 +5,7 @@
 git clone git@github.com:laravel/laravel.git
 ```
 
-你会发现各种慢（如果该项目历史比较悠久，也就是说有很多commits），那么其实你clone的时候是把历史也拉下来。
-
-可是我们需要这些东西吗？不需要，那么就加一个选项吧：
+你会发现各种慢（如果该项目历史比较悠久，也就是说有很多commits），那么其实你clone的时候是把历史也拉下来。可是我们需要这些东西吗？不需要，那么就加一个选项吧：
 
 ```git
 git clone git@github.com:laravel/laravel.git --depth=1
