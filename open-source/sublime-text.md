@@ -34,5 +34,3 @@
 * SublimeREPL                        //允许你在 Sublime Texxt 中运行各种语言
 * Blade Snippets                     //提供 Blade 模板自动补全
 * Laravel 4 Blade Highlighter    //提供 Blade 关键字高亮
-
-----

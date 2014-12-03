@@ -46,5 +46,3 @@
 * 统一命名规范
 
 >  作者：石展@赶集 http://weibo.com/wushizhan
-
-----

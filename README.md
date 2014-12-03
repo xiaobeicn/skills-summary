@@ -37,9 +37,13 @@
 | xiaobeicn | all | https://github.com/xiaobeicn |
 | overtrue  | php | https://github.com/overtrue |
 | Lin-H     | js  | https://github.com/Lin-H  |
+| feilengcui| php | https://github.com/feilengcui |
+| joshle    | php | https://github.com/joshle |
 | ...  | ... | ... |
 
 
+### Gitbooks（待完成...）
+http://xiaobeicn.gitbooks.io/programming-skills-summary
 
 #### 开源协议
 基于 [MIT License](https://github.com/xiaobeicn/programming-skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
