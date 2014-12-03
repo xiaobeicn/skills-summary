@@ -6,8 +6,9 @@
     function randstr($len) {
         $c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         $ret = "";
+        $charlen = strlen($c);
         for($i=0; $i<$len; $i++) { 
-            $ret.= $c[rand()%strlen($c)]; 
+            $ret.= $c[rand()%$charlen]; 
         }
         return $ret; 
 	}
