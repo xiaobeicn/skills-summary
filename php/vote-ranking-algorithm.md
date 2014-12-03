@@ -48,6 +48,6 @@ $socre = log10($voteDispute) + $pos * $time / 45000;
 echo $socre, "\n";
 ```
   
-> via: http://xwsoul.com/posts/444
-> via: http://xwsoul.com/posts/449
+> * via: http://xwsoul.com/posts/444
+> * via: http://xwsoul.com/posts/449
   
