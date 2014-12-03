@@ -40,6 +40,8 @@
 | ...  | ... | ... |
 
 
+### Gitbooks（待完成...）
+http://xiaobeicn.gitbooks.io/programming-skills-summary
 
 #### 开源协议
 基于 [MIT License](https://github.com/xiaobeicn/programming-skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
