@@ -1,8 +1,8 @@
-###×Ö·û´®Ïà¹Ø
+###å­—ç¬¦ä¸²ç›¸å…³
 
-####Éú³ÉËæ»ú×Ö·û´®
-	<?php
-	function randstr($len) { 
+####ç”Ÿæˆéšæœºå­—ç¬¦ä¸²
+<?php
+    function randstr($len) {
         $c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         $ret = "";
         for($i=0; $i<$len; $i++) { 
@@ -10,4 +10,4 @@
         }
         return $ret; 
 	}
-	?>
+?>
