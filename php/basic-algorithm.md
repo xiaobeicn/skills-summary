@@ -89,3 +89,21 @@ function insert_sort($arr){
 $arr = array(49,38,65,97,76,13,27);
 print_r(insert_sort($arr));
 ```
+
+### 使用二分查找数组中某个元素
+
+```php
+function bin_sch($array, $low, $high, $k){
+	if ($low <= $high){
+		$mid = intval(($low+$high)/2);
+		if ($array[$mid] == $k){
+			return $mid;
+		}elseif ($k < $array[$mid]){
+		return bin_sch($array, $low, $mid-1, $k);
+	}else{
+		return bin_sch($array, $mid+1, $high, $k);
+	}
+	}
+	return -1;
+}
+```
