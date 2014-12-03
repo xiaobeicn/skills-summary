@@ -237,5 +237,116 @@ function ob_callback($buffer)
 
 ----
 
+### 简单的页面缓存
+如果你的项目不是基于 CMS 系统或框架，打造一个简单的缓存系统将会非常实在。下面的代码很简单，但是对小网站而言能切切实实解决问题
+
+```php
+<?php  
+    // define the path and name of cached file  
+    $cachefile = 'cached-files/'.date('M-d-Y').'.php';  
+    // define how long we want to keep the file in seconds. I set mine to 5 hours.  
+    $cachetime = 18000;  
+    // Check if the cached file is still fresh. If it is, serve it up and exit.  
+    if (file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {  
+    include($cachefile);  
+        exit;  
+    }  
+    // if there is either no file OR the file to too old, render the page and capture the HTML.  
+    ob_start();  
+?>  
+    <html>  
+        output all your html here.  
+    </html>  
+<?php  
+    // We're done! Save the cached content to a file  
+    $fp = fopen($cachefile, 'w');  
+    fwrite($fp, ob_get_contents());  
+    fclose($fp);  
+    // finally send browser output  
+    ob_end_flush();  
+?>
+```
+
+> via: http://wesbos.com/simple-php-page-caching-technique/
+
+### 在 PHP 中计算距离
+这是一个非常有用的距离计算函数，利用纬度和经度计算从 A 地点到 B地点的距离。该函数可以返回英里，公里，海里三种单位类型的距离。
+
+```php
+function distance($lat1, $lon1, $lat2, $lon2, $unit) {   
+  $theta = $lon1 - $lon2;  
+  $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));  
+  $dist = acos($dist);  
+  $dist = rad2deg($dist);  
+  $miles = $dist * 60 * 1.1515;  
+  $unit = strtoupper($unit);  
+ 
+  if ($unit == "K") {  
+    return ($miles * 1.609344);  
+  } else if ($unit == "N") {  
+      return ($miles * 0.8684);  
+    } else {  
+        return $miles;  
+      }  
+}
+
+//使用方法：
+echo distance(32.9697, -96.80322, 29.46786, -98.53506, "k")." kilometers";
+```
+
+###将秒数转换为时间(年、月、日、小时…)
+这个有用的函数能将秒数表示的事件转换为年、月、日、小时等时间格式。
+
+```php
+function Sec2Time($time){  
+  if(is_numeric($time)){  
+    $value = array(  
+      "years" => 0, "days" => 0, "hours" => 0,  
+      "minutes" => 0, "seconds" => 0,  
+    );  
+    if($time >= 31556926){  
+      $value["years"] = floor($time/31556926);  
+      $time = ($time%31556926);  
+    }  
+    if($time >= 86400){  
+      $value["days"] = floor($time/86400);  
+      $time = ($time%86400);  
+    }  
+    if($time >= 3600){  
+      $value["hours"] = floor($time/3600);  
+      $time = ($time%3600);  
+    }  
+    if($time >= 60){  
+      $value["minutes"] = floor($time/60);  
+      $time = ($time%60);  
+    }  
+    $value["seconds"] = floor($time);  
+    return (array) $value;  
+  }else{  
+    return (bool) FALSE;  
+  }  
+}
+```
+
+### 强制下载文件
+一些诸如 mp3 类型的文件，通常会在客户端浏览器中直接被播放或使用。如果你希望它们强制被下载，也没问题。可以使用以下代码：
+
+```php
+function downloadFile($file){  
+        $file_name = $file;  
+        $mime = 'application/force-download';  
+    header('Pragma: public');     // required  
+    header('Expires: 0');        // no cache  
+    header('Cache-Control: must-revalidate, post-check=0, pre-check=0');  
+    header('Cache-Control: private',false);  
+    header('Content-Type: '.$mime);  
+    header('Content-Disposition: attachment; filename="'.basename($file_name).'"');  
+    header('Content-Transfer-Encoding: binary');  
+    header('Connection: close');  
+    readfile($file_name);        // push it out  
+    exit();  
+}
+```
+----
 
 
