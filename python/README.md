@@ -29,7 +29,7 @@ def dec(func):
         print "after func(*args, **kwargs)"
     return _dec
 
-#四 装饰器本身带有参数
+#四 装饰器本身带有参数,python web框架通常会看到类似这种@get('/test')
 def dec(arg):
     def _dec(func):
         def __dec():
