@@ -17,6 +17,8 @@
 ?>
 ```
 
+----
+
 ### 验证邮件地址
 
 ```php
@@ -28,6 +30,8 @@
   // Returns boolean false! This is *not* a valid email address.
 ?>
 ```
+
+----
 
 ### 净化 HTML 输入和输出
 
@@ -43,6 +47,8 @@
   // $safeHtml is now fully escaped HTML.  You can output $safeHtml to your users without fear!
 ?>
 ```
+
+----
 
 ### 检测一个值是否为 null 或 false
 
@@ -73,6 +79,8 @@
       print('Found it for real this time!');
 ?>
 ```
+
+----
 
 ### 让项目支持laravel一样的自动环境检测(by [overtrue](https://github.com/overtrue))
 
@@ -269,6 +277,8 @@ function ob_callback($buffer)
 
 > via: http://wesbos.com/simple-php-page-caching-technique/
 
+----
+
 ### 在 PHP 中计算距离
 这是一个非常有用的距离计算函数，利用纬度和经度计算从 A 地点到 B地点的距离。该函数可以返回英里，公里，海里三种单位类型的距离。
 
@@ -293,6 +303,8 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 //使用方法：
 echo distance(32.9697, -96.80322, 29.46786, -98.53506, "k")." kilometers";
 ```
+
+----
 
 ###将秒数转换为时间(年、月、日、小时…)
 这个有用的函数能将秒数表示的事件转换为年、月、日、小时等时间格式。
@@ -327,6 +339,8 @@ function Sec2Time($time){
   }  
 }
 ```
+
+----
 
 ### 强制下载文件
 一些诸如 mp3 类型的文件，通常会在客户端浏览器中直接被播放或使用。如果你希望它们强制被下载，也没问题。可以使用以下代码：
@@ -364,6 +378,8 @@ function encryptDecrypt($key, $string, $decrypt){
 } 
 ```
 
+----
+
 ### PHP获取文件大小并格式化
 
 ```php
@@ -393,7 +409,11 @@ function curPageURL() {
 } 
 ```
 
+----
+
 ### PHP强制下载文件
+
+----
 
 ```php
 function download($filename){ 
@@ -447,6 +467,8 @@ function cutStr($string, $sublen, $start = 0, $code = 'UTF-8'){
 } 
 ```
 
+----
+
 ### PHP获取客户端真实IP
 
 ```php
@@ -469,6 +491,8 @@ function getIp() {
 } 
 ```
 
+----
+
 ### PHP防止SQL注入
 
 ```php
@@ -482,6 +506,8 @@ function injCheck($sql_str) {
     } 
 } 
 ```
+
+----
 
 ### PHP页面提示与跳转
 
@@ -511,6 +537,8 @@ function message($msgTitle,$message,$jumpUrl){
 } 
 ```
 
+----
+
 ### PHP计算时长
 
 ```php
@@ -526,6 +554,8 @@ function changeTimeType($seconds) {
 } 
 ```
 
+----
+
 ### PHP打印数组
 
 ```php
@@ -533,6 +563,8 @@ function cf_dd(){
 	array_map(function($x) { var_dump($x); }, func_get_args()); die;
 }
 ```
+
+----
 
 ### 遍历删除目录和目录下所有文件
 
@@ -553,3 +585,133 @@ function cf_del_dir($dir){
 	}
 }
 ```	
+
+----
+
+### 纠正不完整HTML(by [overtrue](https://github.com/overtrue))
+
+```php
+function force_balance_tags( $text ) {
+    $tagstack = array();
+    $stacksize = 0;
+    $tagqueue = '';
+    $newtext = '';
+    // Known single-entity/self-closing tags
+    $single_tags = array( 'area', 'base', 'basefont', 'br', 'col', 'command', 'embed', 'frame', 'hr', 'img', 'input', 'isindex', 'link', 'meta', 'param', 'source' );
+    // Tags that can be immediately nested within themselves
+    $nestable_tags = array( 'blockquote', 'div', 'object', 'q', 'span' );
+
+    // WP bug fix for comments - in case you REALLY meant to type '< !--'
+    $text = str_replace('< !--', '<    !--', $text);
+    // WP bug fix for LOVE <3 (and other situations with '<' before a number)
+    $text = preg_replace('#<([0-9]{1})#', '&lt;$1', $text);
+
+    while ( preg_match("/<(\/?[\w:]*)\s*([^>]*)>/", $text, $regex) ) {
+        $newtext .= $tagqueue;
+
+        $i = strpos($text, $regex[0]);
+        $l = strlen($regex[0]);
+
+        // clear the shifter
+        $tagqueue = '';
+        // Pop or Push
+        if ( isset($regex[1][0]) && '/' == $regex[1][0] ) { // End Tag
+            $tag = strtolower(substr($regex[1],1));
+            // if too many closing tags
+            if( $stacksize <= 0 ) {
+                $tag = '';
+                // or close to be safe $tag = '/' . $tag;
+            }
+            // if stacktop value = tag close value then pop
+            else if ( $tagstack[$stacksize - 1] == $tag ) { // found closing tag
+                $tag = '</' . $tag . '>'; // Close Tag
+                // Pop
+                array_pop( $tagstack );
+                $stacksize--;
+            } else { // closing tag not at top, search for it
+                for ( $j = $stacksize-1; $j >= 0; $j-- ) {
+                    if ( $tagstack[$j] == $tag ) {
+                    // add tag to tagqueue
+                        for ( $k = $stacksize-1; $k >= $j; $k--) {
+                            $tagqueue .= '</' . array_pop( $tagstack ) . '>';
+                            $stacksize--;
+                        }
+                        break;
+                    }
+                }
+                $tag = '';
+            }
+        } else { // Begin Tag
+            $tag = strtolower($regex[1]);
+
+            // Tag Cleaning
+
+            // If it's an empty tag "< >", do nothing
+            if ( '' == $tag ) {
+                // do nothing
+            }
+            // ElseIf it presents itself as a self-closing tag...
+            elseif ( substr( $regex[2], -1 ) == '/' ) {
+                // ...but it isn't a known single-entity self-closing tag, then don't let it be treated as such and
+                // immediately close it with a closing tag (the tag will encapsulate no text as a result)
+                if ( ! in_array( $tag, $single_tags ) )
+                    $regex[2] = trim( substr( $regex[2], 0, -1 ) ) . "></$tag";
+            }
+            // ElseIf it's a known single-entity tag but it doesn't close itself, do so
+            elseif ( in_array($tag, $single_tags) ) {
+                $regex[2] .= '/';
+            }
+            // Else it's not a single-entity tag
+            else {
+                // If the top of the stack is the same as the tag we want to push, close previous tag
+                if ( $stacksize > 0 && !in_array($tag, $nestable_tags) && $tagstack[$stacksize - 1] == $tag ) {
+                    $tagqueue = '</' . array_pop( $tagstack ) . '>';
+                    $stacksize--;
+                }
+                $stacksize = array_push( $tagstack, $tag );
+            }
+
+            // Attributes
+            $attributes = $regex[2];
+            if( ! empty( $attributes ) && $attributes[0] != '>' )
+                $attributes = ' ' . $attributes;
+
+            $tag = '<' . $tag . $attributes . '>';
+            //If already queuing a close tag, then put this tag on, too
+            if ( !empty($tagqueue) ) {
+                $tagqueue .= $tag;
+                $tag = '';
+            }
+        }
+        $newtext .= substr($text, 0, $i) . $tag;
+        $text = substr($text, $i + $l);
+    }
+
+    // Clear Tag Queue
+    $newtext .= $tagqueue;
+
+    // Add Remaining text
+    $newtext .= $text;
+
+    // Empty Stack
+    while( $x = array_pop($tagstack) )
+        $newtext .= '</' . $x . '>'; // Add remaining tags to close
+
+    // WP fix for the bug with HTML comments
+    $newtext = str_replace("< !--","<!--",$newtext);
+    $newtext = str_replace("<    !--","< !--",$newtext);
+
+    return $newtext;
+}
+```
+
+demo:
+
+```php
+echo force_balance_tags('<p><a>overtrue<p>');
+// <p><a>overtrue</a><p>
+```
+
+----
+
+
