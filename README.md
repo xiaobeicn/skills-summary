@@ -32,14 +32,15 @@
 - [ ] other
 
 ### 贡献者（排名不分先后）
-| 贡献者      | 贡献目录  |  Github  |
-| --------   | :-----:  | :----:  |
-| xiaobeicn | all | https://github.com/xiaobeicn |
-| overtrue  | php | https://github.com/overtrue |
-| Lin-H     | js  | https://github.com/Lin-H  |
-| feilengcui| php | https://github.com/feilengcui |
-| joshle    | php | https://github.com/joshle |
-| itsmikej  | php | https://github.com/itsmikej |
+| 贡献者      | 贡献目录|  Github   |
+| --------    | :-----: | :----:    |
+| xiaobeicn   | all     | https://github.com/xiaobeicn |
+| overtrue    | php     | https://github.com/overtrue |
+| Lin-H       | js      | https://github.com/Lin-H  |
+| feilengcui  | php     | https://github.com/feilengcui |
+| joshle      | php     | https://github.com/joshle |
+| itsmikej    | php     | https://github.com/itsmikej |
+| lifesign    | laravel | https://github.com/lifesign |
 | ...  | ... | ... |
 
 
