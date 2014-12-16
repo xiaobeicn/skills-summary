@@ -15,4 +15,6 @@ if (App::environment() != 'production') {
 
 2、自动对 POST, PUT 或者 DELETE 的请求进行 csrf 认证
 
-```Route::when('*', 'csrf', array('post', 'put', 'delete'));```
+```php
+Route::when('*', 'csrf', array('post', 'put', 'delete'));
+```
