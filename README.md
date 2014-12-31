@@ -1,6 +1,5 @@
 ## 编程技巧汇总
-
-----
+===
 
 为了方便快速编写代码，创建了这个公开库。旨在提高编写效率和编写质量，避免多次google一样的代码。这是一个在线公开笔记，也是一个提高自己能力的文档，会收集大量优秀的代码片段。
 
@@ -28,7 +27,7 @@
 - [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
 - [x] [open-source](https://github.com/xiaobeicn/programming-skills-summary/tree/master/open-source)
-- [ ] python
+- [x] [python](https://github.com/xiaobeicn/programming-skills-summary/tree/master/python)
 - [ ] other
 
 ### 贡献者（排名不分先后）
