@@ -1,4 +1,4 @@
-## 编程技巧汇总
+## 编程技巧汇总 :books:
 ===
 
 为了方便快速编写代码，创建了这个公开库。旨在提高编写效率和编写质量，避免多次google一样的代码。这是一个在线公开笔记，也是一个提高自己能力的文档，会收集大量优秀的代码片段。
@@ -41,10 +41,6 @@
 | itsmikej    | php     | https://github.com/itsmikej |
 | lifesign    | laravel | https://github.com/lifesign |
 | ...  | ... | ... |
-
-
-### Gitbooks（待完成...）
-http://xiaobeicn.gitbooks.io/programming-skills-summary
 
 #### 开源协议
 基于 [MIT License](https://github.com/xiaobeicn/programming-skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
