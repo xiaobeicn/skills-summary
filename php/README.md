@@ -734,3 +734,17 @@ function randomColor() {
     return $str; 
 } 
 ```
+
+### 2个时间的间隔
+```php
+$from = '2014-08-31 18:00:00';
+$to = '2014-09-03 09:56:00';
+
+$fromDate = new DateTime($from);
+$toDate = new DateTime($to);
+
+$dateIntval = $fromDate->diff($toDate);
+
+echo $dateIntval->format('相差%r%y年%m月%d天%h小时%i分%s秒');
+
+```
