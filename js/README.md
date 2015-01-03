@@ -1478,3 +1478,22 @@ function ToCDB(str){
  return result;
 }
 ````
+101、localStorage过期设置
+
+```javascript
+      function set(key,value){
+            var time = +new Date();
+            localStorage.setItem(key,JSON.stringify({data:value,time:time}));
+      }  
+      function get(key,expire){
+            var data = localStorage.getItem(key);
+            var obj = JSON.parse(data);
+            if(+new Date() - obj.time > expire){
+                  console.log('expired');
+                  localStorage.removeItem(key);
+            }else{
+                  console.log(obj.data);
+            }
+      }
+}
+````
