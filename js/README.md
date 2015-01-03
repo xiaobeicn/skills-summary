@@ -1495,5 +1495,16 @@ function ToCDB(str){
                   console.log(obj.data);
             }
       }
-}
+
 ````
+102.数组交集
+```javascript
+function intersect (arr1,arr2){ 
+      return arr1.filter(function(v){ 
+            return ~arr2.indexOf(v); 
+      }); 
+}
+
+````
+
+
