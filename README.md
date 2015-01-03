@@ -40,6 +40,7 @@
 | joshle      | php     | https://github.com/joshle |
 | itsmikej    | php     | https://github.com/itsmikej |
 | lifesign    | laravel | https://github.com/lifesign |
+| lovecn      | php/js  | https://github.com/lovecn |
 | ...  | ... | ... |
 
 #### 开源协议
