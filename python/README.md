@@ -49,4 +49,11 @@ else:
     print("because break happens,i will never run")
 ```
 
+#### 用Python输出一个小于num的[Fibonacci数列](http://baike.baidu.com/link?url=7uObdjcOKuj7aZr1lU_P_DS0cBRbXWdp2v5k61uInTxjmxr0o62CL82HOc9mTZOQpSykiQroKozMPEI6ekrn0q)
+```Python
+a,b = 0, 1
+while b<num:
+    print (b),
+    a, b = b, a+b
+```
 ----
