@@ -1,4 +1,4 @@
-## 加入 homestead box
+## 加入 laravel/homestead box
 
 ```shell
 vagrant box add laravel/homestead
