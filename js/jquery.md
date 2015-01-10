@@ -349,4 +349,25 @@ $(this).height(mainheight);
 ```
 
 ----
-
+###  jQuery全选/反选功能实例
+```javascript
+            $("#CheckAll").click(function(){
+                $("[name=items]:checkbox").attr("checked", true);
+            })
+            $("#CheckNo").click(function(){
+                $("[name=items]:checkbox").attr("checked", false);
+            })
+            $("#CheckRev").click(function(){
+                $("[name=items]:checkbox").each(function(){
+                    //$(this).attr("checked", !$(this).attr("checked"));
+                    this.checked = !this.checked;
+                })
+            })
+            $("#send").click(function(){
+                var str="你选中的是：\r\n";
+                $("[name=items]:checkbox:checked").each(function(){
+                    str += $(this).val()+"\r\n";
+                })
+                alert(str);
+            })
+```
