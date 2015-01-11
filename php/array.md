@@ -8,9 +8,9 @@ $arr = array(
 
 function asc_number_sort ($x, $y)
 {
-  if ($x['key1] > $y['key1']) {
+  if ($x['key1'] > $y['key1']) {
     return true;
-  } elseif ($x['key1] < $y['key1']) {
+  } elseif ($x['key1'] < $y['key1']) {
     return false;
   } else{
     return 0;
