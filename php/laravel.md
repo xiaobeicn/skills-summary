@@ -52,5 +52,16 @@ Route::get('/request-json-model', function(){
 });
 ```
 
+### 显示所有sql
+```php
+// Display all SQL executed in Eloquent
+Event::listen('illuminate.query', function($query)
+{
+    var_dump($query);
+});
+```
+
+
+
 
 
