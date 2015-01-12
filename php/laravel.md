@@ -30,3 +30,27 @@ Route::pattern('slug', '[a-z0-9-]+');
 Route::pattern('username', '[a-z0-9_-]{3,16}');
 ```
 
+### 路由直接返回 json Response
+```php
+//array
+Route::get('/request-json-array', function(){
+    
+    $array = array('foo', 'bar');
+    
+    //this route should returns json response
+    return $array;
+    
+});
+
+//or eloquent model
+
+Route::get('/request-json-model', function(){
+    
+    //if 'User' is an eloquent model, this route should returns json response
+    return User::all();
+    
+});
+```
+
+
+
