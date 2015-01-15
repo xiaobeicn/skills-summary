@@ -61,6 +61,73 @@ Event::listen('illuminate.query', function($query)
 });
 ```
 
+### 在BaseModel中定义了multiwhere来支持多where
+```php
+// 多where
+public function scopeMultiwhere($query, $arr)
+{
+    if (!is_array($arr)) {
+        return $query;
+    }
+
+    foreach ($arr as $key => $value) {
+        $query = $query->where($key, $value);
+    }
+    return $query;
+}
+```
+
+### 日志分文件存储
+```php
+// 1.首先自定义了日志编辑类：
+<?php
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Illuminate\Log\Writer;
+ 
+class BLogger
+{
+    // 所有的LOG都要求在这里注册
+    const LOG_ERROR = 'error';
+    const LOG_SHOP = 'shop';
+    const LOG_QUERY = 'query';
+    const LOG_LOGIN = 'login';
+ 
+    private static $loggers = array();
+ 
+    // 获取一个实例
+    public static function getLogger($type = self::LOG_ERROR, $day = 30)
+    {
+        if (empty(self::$loggers[$type])) {
+            self::$loggers[$type] = new Writer(new Logger($type));
+        }
+        $log = self::$loggers[$type];
+        $log->useDailyFiles(storage_path().'/logs/'. $type .'.log', $day);
+        return $log;
+    }
+}
+
+// 2.然后在app/start/global.php中修改错误日志回调函数为：
+App::error(function(Exception $exception, $code)
+{
+    // 如果没有路径就直接跳转到登录页面
+    if ($exception instanceof NotFoundHttpException) {
+        return Redirect::route('login');
+    }
+ 
+     Log::error($exception);
+ 
+    $err = [
+        'message' => $exception->getMessage(),
+        'file' => $exception->getFile(),
+        'line' => $exception->getLine(),
+        'code' => $exception->getCode(),
+        'url' => Request::url(),
+        'input' => Input::all(),
+    ];
+    BLogger::getLogger(BLogger::LOG_ERROR)->error($err);
+});
+```
 
 
 
