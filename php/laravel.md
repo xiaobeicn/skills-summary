@@ -129,6 +129,51 @@ App::error(function(Exception $exception, $code)
 });
 ```
 
+### Very Simple Menu Active for unlimited routes
+```php
+// **** YOUR VIEW / MENU **** //
+<ul>
+	<li{{ HTML::current('music', 'music/*') }}><a href="{{ URL::route('music') }}">Music</a></li>
+</ul>
+ 
+// **** GLOBAL.PHP OR ROUTES.PHP **** //
+HTML::macro('current', function()
+{
+    $Routes = func_get_args();
+    $HTML = ' class="current"';
+    foreach($Routes as $route):
+    	if(Request::is($route))
+    	    return $HTML;
+    endforeach;
+});
+// from (http://laravelsnippets.com/snippets/very-simple-menu-active-for-unlimited-routes)
+```
 
+### Simple add active class for menu
+```php
+//view.blade.php ---------------------------------------------------------------
+<div class="menu">
+    <ul>
+        {{ HTML::menu_active('/','Home') }}
+        {{ HTML::menu_active('page/about','About') }}
+        {{ HTML::menu_active('page/contacts','Contacts') }}
+        {{ HTML::menu_active('page/service','Service') }}
+    </ul>
+</div>
 
-
+//routes.php --------------------------------------------------------------------
+HTML::macro('menu_active', function($route,$name)
+{
+    if(Request::is($route . '/*') OR Request::is($route))
+    {
+        $active ='<li class="active"><a href="'.URL::to($route).'">'.$name.'</a></li>';
+    }
+    else
+    {
+        $active ='<li><a href="'.URL::to($route).'">'.$name.'</a></li>';
+    }
+    
+    return $active;
+});
+// from (http://laravelsnippets.com/snippets/menu-activated)
+```
