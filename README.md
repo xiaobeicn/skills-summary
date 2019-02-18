@@ -30,6 +30,7 @@
 - [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
 - [x] [open-source](https://github.com/xiaobeicn/programming-skills-summary/tree/master/open-source)
 - [x] [python](https://github.com/xiaobeicn/programming-skills-summary/tree/master/python)
+- [x] [go](https://github.com/xiaobeicn/programming-skills-summary/tree/master/go)
 - [ ] other
 
 ### 贡献者（排名不分先后）
