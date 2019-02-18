@@ -1,3 +1,4 @@
+```go
 /*
   Golang速学速查速用代码手册
   
@@ -630,3 +631,4 @@ func TestRegexp(t *testing.T) {
 func main() {
 	helloWorld()
 }
+```
