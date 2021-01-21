@@ -4,8 +4,8 @@
 
 #### 贡献方式：
 
-* [`fork`](https://github.com/xiaobeicn/programming-skills-summary/fork) 项目，然后推送给我
-* 创建 [`issues`](https://github.com/xiaobeicn/programming-skills-summary/issues/new) ,我会及时处理
+* [`fork`](https://github.com/xiaobeicn/skills-summary/fork) 项目，然后推送给我
+* 创建 [`issues`](https://github.com/xiaobeicn/skills-summary/issues/new) ,我会及时处理
 
 #### 贡献要求
 
@@ -18,18 +18,18 @@
 
 ### 列表状态
 
-- [x] [api](https://github.com/xiaobeicn/programming-skills-summary/tree/master/api)
-- [x] [git](https://github.com/xiaobeicn/programming-skills-summary/tree/master/git)
-- [x] [html-css](https://github.com/xiaobeicn/programming-skills-summary/tree/master/html-css)
-- [x] [js](https://github.com/xiaobeicn/programming-skills-summary/tree/master/js)
-- [x] [markdown](https://github.com/xiaobeicn/programming-skills-summary/tree/master/markdown)
-- [x] [mysql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/mysql)
-- [x] [nosql](https://github.com/xiaobeicn/programming-skills-summary/tree/master/nosql)
-- [x] [PHP](https://github.com/xiaobeicn/programming-skills-summary/tree/master/php)
-- [x] [server](https://github.com/xiaobeicn/programming-skills-summary/tree/master/server)
-- [x] [open-source](https://github.com/xiaobeicn/programming-skills-summary/tree/master/open-source)
-- [x] [python](https://github.com/xiaobeicn/programming-skills-summary/tree/master/python)
-- [x] [go](https://github.com/xiaobeicn/programming-skills-summary/tree/master/go)
+- [x] [api](https://github.com/xiaobeicn/skills-summary/tree/master/api)
+- [x] [git](https://github.com/xiaobeicn/skills-summary/tree/master/git)
+- [x] [html-css](https://github.com/xiaobeicn/skills-summary/tree/master/html-css)
+- [x] [js](https://github.com/xiaobeicn/skills-summary/tree/master/js)
+- [x] [markdown](https://github.com/xiaobeicn/skills-summary/tree/master/markdown)
+- [x] [mysql](https://github.com/xiaobeicn/skills-summary/tree/master/mysql)
+- [x] [nosql](https://github.com/xiaobeicn/skills-summary/tree/master/nosql)
+- [x] [PHP](https://github.com/xiaobeicn/skills-summary/tree/master/php)
+- [x] [server](https://github.com/xiaobeicn/skills-summary/tree/master/server)
+- [x] [open-source](https://github.com/xiaobeicn/skills-summary/tree/master/open-source)
+- [x] [python](https://github.com/xiaobeicn/skills-summary/tree/master/python)
+- [x] [go](https://github.com/xiaobeicn/skills-summary/tree/master/go)
 - [ ] other
 
 ### 贡献者（排名不分先后）
@@ -46,5 +46,5 @@
 | ...  | ... | ... |
 
 #### 开源协议
-基于 [MIT License](https://github.com/xiaobeicn/programming-skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
+基于 [MIT License](https://github.com/xiaobeicn/skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
 部分源码来源网络收集，如果不希望我们展示或者侵权的地方联系我 <xiaobeicn@163.com> ，我会及时处理。
