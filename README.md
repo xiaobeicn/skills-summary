@@ -30,7 +30,6 @@
 - [x] [open-source](https://github.com/xiaobeicn/skills-summary/tree/master/open-source)
 - [x] [python](https://github.com/xiaobeicn/skills-summary/tree/master/python)
 - [x] [go](https://github.com/xiaobeicn/skills-summary/tree/master/go)
-- [ ] other
 
 ### 贡献者（排名不分先后）
 | 贡献者      | 贡献目录|  Github   |
@@ -43,7 +42,6 @@
 | itsmikej    | php     | https://github.com/itsmikej |
 | lifesign    | laravel | https://github.com/lifesign |
 | lovecn      | php/js/python  | https://github.com/lovecn |
-| ...  | ... | ... |
 
 #### 开源协议
 基于 [MIT License](https://github.com/xiaobeicn/skills-summary/blob/master/LICENSE) 开源，使用代码只需说明来源即可。
