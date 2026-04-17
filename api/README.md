@@ -10,5 +10,3 @@
 * 与你的用户保持联系
 * 提供示例代码
 
-> via:[link](http://www.huahuaxia.net/cs-research/restful-api-resource-naming/)
-----
