@@ -1,21 +1,5 @@
 ## 编程技巧汇总 :books:
 
-
-### 列表状态
-
-- [x] [api](https://github.com/xiaobeicn/skills-summary/tree/master/api)
-- [x] [git](https://github.com/xiaobeicn/skills-summary/tree/master/git)
-- [x] [html-css](https://github.com/xiaobeicn/skills-summary/tree/master/html-css)
-- [x] [js](https://github.com/xiaobeicn/skills-summary/tree/master/js)
-- [x] [markdown](https://github.com/xiaobeicn/skills-summary/tree/master/markdown)
-- [x] [mysql](https://github.com/xiaobeicn/skills-summary/tree/master/mysql)
-- [x] [nosql](https://github.com/xiaobeicn/skills-summary/tree/master/nosql)
-- [x] [PHP](https://github.com/xiaobeicn/skills-summary/tree/master/php)
-- [x] [server](https://github.com/xiaobeicn/skills-summary/tree/master/server)
-- [x] [open-source](https://github.com/xiaobeicn/skills-summary/tree/master/open-source)
-- [x] [python](https://github.com/xiaobeicn/skills-summary/tree/master/python)
-- [x] [go](https://github.com/xiaobeicn/skills-summary/tree/master/go)
-
 ### 贡献者（排名不分先后）
 | 贡献者      | 贡献目录|  Github   |
 | --------    | :-----: | :----:    |
